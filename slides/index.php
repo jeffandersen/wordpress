@@ -69,7 +69,7 @@
        <h1>WordPress.com VS WordPress.org</h1>
        <div class="build">
         <p class="large">WordPress.com is Hosted for you - No servers or code required!</p>
-        <p>.com Doesn't allow for a lot of customization. No plugins or custom themes.</p>
+        <p>The .com version doesn't allow for a lot of customization. No plugins or custom themes.</p>
          <p class="large-font">We will be using the self-hosted .org</p>
          <p>Self-Hosted allows for 100% customization - Themes and plugins oh-my!</p>
        </div>
@@ -78,7 +78,7 @@
       <article>
         <h3>Jargon and Buzz Words - Welcome to our world</h3>
         <div class="build">
-          <p><strong>localhost</strong> - / Local Server (MAMP or WAMP) - A small service that runs on your laptop which mimics the functionality of a large, paid server. We are able to work on our website without uploading it anywhere.</p>
+          <p><strong>localhost</strong> - / Local Server (MAMP or XAMP) - A small service that runs on your laptop which mimics the functionality of a large, paid server. We are able to work on our website without uploading it anywhere.</p>
           <p><strong>PHP tags</strong> - PHP is the programming language WordPress is written in. When we need to use PHP, we put it inside <span class="red"> <?php output('<?php and ?>'); ?></span> tags so our server will know to process it as PHP.</p>
           <p><strong>stylesheet</strong> - The style.css file within our theme. From this file we control the colours, fonts, sizes and all style elements for our website.</p>
           <p><strong>Dashboard</strong> - The WordPress back end you see when you first log into your website</p>
@@ -105,7 +105,7 @@
           <p>Using a text editor makes things a lot easier on you and I recommend using one today.</p>
           <p>There are tons of text editors available - Sublime Text, text wrangler, NotePad++, Text Mate, vim... </p>
           <p>I recommend using <strong>Sublime Text</strong> which has an unlimited trial but you are welcome to try anything you like - your table's mentor may have a specific favorite too!</p>
-          <a href="http://www.sublimetext.com/2">http://www.sublimetext.com/2</a>
+          <a href="http://www.sublimetext.com/3">http://www.sublimetext.com/3</a>
           <p>Do not try and edit your theme from the WordPress back-end</p>
         </div>
       </article>
@@ -124,13 +124,13 @@
       <article id="install">
       <style type="text/css">#install p.small {font-size: 22px; }</style>
         <h3 class="padBottom">Installing WordPress!</h3>
-        <p>Installing wordpress can be a little tricky the first time, so pay attention here and it will all go smoothly!</p>
+        <p>Installing WordPress can be a little tricky the first time, so pay attention here and it will all go smoothly!</p>
         <p></p>
         <div class="build">
-          <p><strong>Step 1</strong>: Unzip the wordpress package you downloaded, you'll have a folder called <span class="red">wordpress</span></p>
+          <p><strong>Step 1</strong>: Unzip the WordPress package you downloaded, you'll have a folder called <span class="red">wordpress</span></p>
           <p><strong>Step 2</strong>: Move that Folder over to your local server (localhost).</p>
           <p class="small">TIP: Make sure you only have one folder called wordpress. You shouldn't have a folder called wordpress inside of one called wordpress!</p>
-          <p class="small">If you need help finding the folder: <strong>Windows:</strong> Click WAMP icon in tray &rarr; <span class="red">www directory</span><strong> Mac: </strong>click MAMP icon &rarr; Preferences &rarr; Apache Tab </p>
+          <p class="small">If you need help finding the folder: <strong>Windows:</strong> Click XAMP icon in tray &rarr; <span class="red">www directory</span><strong> Mac: </strong>click MAMP icon &rarr; Preferences &rarr; Apache Tab </p>
           <p><strong>Step 3</strong>: Open up PHPmyadmin and create a DB called <span class="red">llc</span></p>
           <p class="small"><strong>Windows:</strong> Go to <a href="http://localhost" target=_blank>http://localhost</a> <strong>Mac: </strong>Go to <a href="http://localhost:8888/MAMP/" target=_blank>http://localhost:8888/MAMP/</a> <strong>Both:</strong> click PHPMyAdmin tab</p>
         </div>
@@ -198,7 +198,8 @@
           <p>Wordpress.org/extend/themes - All Free</p>
           <p>Themify.me Paid & Free</p>
           <p>WooThemes.com - Paid and Free</p>
-          <p>ThemeForest.net - Paid / Inexpensive</p>
+         <!--  <p>ThemeForest.net - Paid / Inexpensive</p> -->
+         <!-- Any suggestions? -->
           <p>+ Many More - anyone have a favourite?</p>
       </article>
 
@@ -364,6 +365,7 @@
         <p><strong>single.php</strong>- Default template used for displaying a single post </p>
         <!-- <p><strong>style.css</strong>-  </p> -->
         <p><strong>tag.php</strong> - Displaying all posts within a certain tag </p>
+        <p><strong>Not sure which?</strong> Edit the file, refresh the page, and see if you got the right one!” ie. don’t be afraid to start.</p>
       </article>
 
 <!--       <article>
@@ -460,18 +462,19 @@ div.parent div.child { ... }
 }</pre>
 
 </article><article>
-<pre>list-style-type: square; /* changes from circle bullets to squares*/
-  font-style:italic;
+<pre>{
+  list-style-type: square; /* changes from circle bullets to squares*/
+  font-style: italic;
 }</pre>
 
 <pre>.more {
-  float: left/right/none; /* floats an element to the left or right of its relative parent */
-  text-align: center/left/right/inherit;
+  float: left; /* other possible values: right, none */
+  text-align: center; /* other possible values: left, right, inherit */
   margin: 10px 20px 15px 25px; /* Top Right Bottom Left margin values*/
-  font-weight:bold;
-  width:100%;
-  height:500px;
-  overflow:scroll; /* anything over 500px high will have scrollbars */
+  font-weight: bold;
+  width: 100%;
+  height: 500px;
+  overflow: scroll; /* anything over 500px high will have scrollbars */
 }</pre>
   
 </article>
@@ -597,11 +600,11 @@ div.parent div.child { ... }
       <article>
         <h3>The Loop Steps</h3>
         <div class="build">
-          <p>1. The blog page is requested by the user. Wordpress asks the database for all content for that page.</p>
+          <p>1. The blog page is requested by the user. WordPress asks the database for all content for that page.</p>
           <p>2. The database returns 5 of the latest blog posts</p>
-          <p>3. Wordpress first grab the header.php file and starts the page output</p>
-          <p>4. Wordpress then hits the loop. Since we have 5 posts from the database, we output the code within the loop 5 times</p>
-          <p>5. Wordpress is done the loop, it moves on and outputs the sidebar and the footer</p>
+          <p>3. WordPress first grab the header.php file and starts the page output</p>
+          <p>4. WordPress then hits the loop. Since we have 5 posts from the database, we output the code within the loop 5 times</p>
+          <p>5. WordPress is done the loop, it moves on and outputs the sidebar and the footer</p>
         </div>
       </article>
 
@@ -617,7 +620,7 @@ div.parent div.child { ... }
 "); ?>
 </pre>
       <h3 class="">Still Confused? Dont Worry!</h3>
-      <p>Our wordpress theme comes with the loop.php which handles most of this for you.</p>
+      <p>Our WordPress theme comes with the loop.php which handles most of this for you.</p>
       <p>You just need to be aware of how the loop works and what it looks like so you can edit it!</p>
       </article>
 
@@ -639,7 +642,7 @@ div.parent div.child { ... }
         <div class="build">
           <p>There are hundreds of template tags</p>
           <p class="small"><a href="http://codex.wordpress.org/Template_Tags">http://codex.wordpress.org/Template_Tags</a></p>
-          <img src="http://cl.ly/C28x/Screen%20Shot%202011-11-22%20at%206.24.33%20PM.png" alt="">
+          <img src="assets/images/template-tags.png" alt="">
           <p>Lets take a look at some of the commonly used ones.</p>
         </div>
       </article>
@@ -666,7 +669,7 @@ div.parent div.child { ... }
         <img src="assets/images/editing-single.png" alt="">
         <p>Save the file and go to a single post on your website</p>
         <p>Do you see where it says <span class="red">Hello, I'm editing single.php!</span> </p>
-        <p>We dont see this on any other page because single.php only controls single blog posts.</p>
+        <p>We don't see this on any other page because single.php only controls single blog posts.</p>
       </article>
 
       <article>
@@ -679,7 +682,7 @@ div.parent div.child { ... }
       </article>
 
       <article>
-        <p>Go into the wordpress admin an edit one of your posts.</p>
+        <p>Go into the WordPress admin an edit one of your posts.</p>
         <p>At the bottom right, click set featured image.<img src="http://wes.io/V8TP/featured"></p>
         
         <p>Select and upload a file. You will need a rather large image for this. If you don't have any available, use the provided images in the learner files folder.</p>
@@ -853,20 +856,19 @@ div.parent div.child { ... }
 
       </article>
 
-      <article>
-        <p>Your Code should look something like this:</p>
-        <br>
-        <img src="http://wes.io/V8LA/custom-page-template" alt="">
-      </article>
-      <article>
-        <div class="build">
-          <p><strong>Step 3:</strong> We don't want a sidebar for this page, so go ahead and delete <span class="red"><?php output("<?php get_sidebar(); ?>"); ?></span>. Make sure to save your file after this change. </p>
-          <p><strong>Step 4:</strong> Go to the WordPress dashboard, and edit your contact page.</p>
-          <p>You'll now see under "Page Attributes" we have a template dropdown.</p>
-          <p><img src="http://wes.io/MLnn/content" alt=""></p>
-          <p>Select Contact Page and click update then view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010.35.29%20PM.png" alt=""></p>
-        </div>
-      </article>
+      <article>         <p>Your Code should look something like
+this:</p>         <br>         <img src="http://wes.io/V8LA/custom-
+page-template" alt="">       </article>       <article>         <div
+class="build">           <p><strong>Step 3:</strong> We don't want a
+sidebar for this page, so go ahead and delete <span class="red"><?php
+output("<?php get_sidebar(); ?>"); ?></span>. Make sure to save your
+file after this change. </p>           <p><strong>Step 4:</strong> Go
+to the WordPress dashboard, and edit your contact page.</p>
+<p>You'll now see under "Page Attributes" we have a template
+dropdown.</p>           <p><img src="http://wes.io/MLnn/content"
+alt=""></p>           <p>Select Contact Page and click update then
+view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
+.35.29%20PM.png" alt=""></p>         </div>       </article>
 
       <article>
         <h3>Building a template for our home page</h3>
@@ -894,7 +896,7 @@ div.parent div.child { ... }
 
       <article>
         <h3>Exercise #6: Widgets!</h3>
-        <p>Widgets are modular items that can be added to your sidebar. You can see there are some default ones already in Dashboard → Appearance → Widgets</p>
+        <p>Widgets are modular items that can be added to your sidebar (or anywhere else in the theme). You can see there are some default ones already in Dashboard → Appearance → Widgets</p>
 
         <p>How do we add one?</p>
         <p>Let's add our latest tweets to our sidebar! Click the link below, log into your twitter account and click "Create New" in the top right.</p>
@@ -936,11 +938,12 @@ div.parent div.child { ... }
         <p>When you need more functionality, plugins come to the rescue!</p>
         <p>There is a huge community of developers that create plugins that you can install for free.</p>
         <p>Can be as small as adding a popup photo gallery to as large as running a social network!</p>
+        <p>Remember to check the plugins WordPress version, if the plugin has been updated within the last 2 years andcheck out the reviews</p>
       </article>
 
       <article>
         <p>All Plugins live in /wp-content/plugins but we can also interface with them via the dashboard, just like themes!</p>
-        <p><img src="http://cl.ly/C1gz/Screen%20Shot%202011-11-23%20at%2012.17.14%20AM.png" alt=""></p>
+        <p><img src="assets/images/plugins.png" alt=""></p>
       </article>
 
       <article>
@@ -983,6 +986,14 @@ div.parent div.child { ... }
       <article>
         <p>The plugin will automatically add social buttons to your posts, but let's take a look at a few of the features</p>
         <img src="http://wes.io/MXGJ/content">
+      </article>
+      <article>
+        <p>Some things to note when looking for plugins:</p>
+        <ul>
+          <li>does it support your version of WordPress?</li>
+          <li>has it been recently-ish updated (within the last 2 years)</li>
+          <li>check out the reviews</li>
+        </ul>
       </article>
 
       <article>
@@ -1121,8 +1132,8 @@ div.parent div.child { ... }
       <article>
         <h3>Making WordPress Live</h3>
         <p>Migrating WordPress, or hosting it so everyone can see it, requires a few steps to make it live.</p>
-        <p>First, you need host. There are tons of great, affordable ones. I recommend using <a href="http://bluehost.com">BlueHost.com</a></p>
-        <p>Second, you will need to follow the migration guide. I've put together a video on how to do this: <a href="https://www.youtube.com/watch?v=gk6_lW9INos" target=_blank>youtube.com/watch?v=gk6_lW9INos</a></p>
+        <p>First, you need host. There are tons of great, affordable ones. I recommend using <a href="http://wpengine.com/">WPEngine</a>.</p>
+        <p>Second, you will need to follow the migration guide. Here's a video on how to do this: <a href="https://www.youtube.com/watch?v=gk6_lW9INos" target=_blank>youtube.com/watch?v=gk6_lW9INos</a></p>
       </article>
 
       <article>
