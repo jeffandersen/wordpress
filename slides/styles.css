@@ -57,3 +57,66 @@ h1 {
 .slides > article {
 	padding-top: 30px !important;
 }
+
+.add-margin-top {
+  margin-top: 20px;
+}
+
+.build {
+  padding-top: 20px;
+}
+
+.scale-image {
+  height: 200px;
+  margin-top: 20px;
+}
+
+p.no-top-margin {
+  margin-top: 0;
+}
+
+.instructor {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.instructor h4 {
+  width: 100%;
+  text-align: center;
+}
+
+.instructor .picture {
+  float: left;
+  width: 35%;
+  margin-top: 5px;
+}
+
+.instructor .picture img {
+  border-radius: 50%;
+}
+
+.instructor .details {
+  float: left;
+  width: 65%;
+  padding-top: 20px;
+}
+
+.instructor .details ul,
+.instructor .details h3 {
+  margin-left: 50px;
+}
+
+.instructor .details h3 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.instructor .details ul {
+  font-size: 0.8em;
+  margin-top: 20px;
+}
+
+.instructor .details .label {
+  display: inline-block;
+  width: 80px !important;
+}

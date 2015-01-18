@@ -7,31 +7,36 @@
     <script src='assets/default.js'></script>
     <link rel="stylesheet" href="styles.css">
   </head>
-  
+
   <?php function output($code){ echo htmlentities($code); }; ?>
 
   <body style='display: none'>
-
     <section class='slides layout-regular template-default'>
       <img src='assets/images/ladieslearningcode-125x125.gif'>
       <article class="home">
-        <h1>
-          Ladies Learning 
-          <br>
-          WordPress
-        </h1>
-        <p>
-          <em>Original Content by <a href="http://www.wesbos.com">Wes Bos</a></em>
-          <br>
-          <br>
-          <strong>Your Lead Instructors Today:</strong> 
-          <br>
-        </p>
-        <p>Open these slides in a modern browser and use your arrow keys to follow along</p>
+        <h1>WordPress for Beginners</h1>
+
+        <p>Ladies Learning Code: Halifax</p>
+        <p><em style="font-size: 0.7em">Original Content by <a href="http://www.wesbos.com">Wes Bos</a></em></p>
+
+        <div class="instructor">
+          <h4>Your Lead Instructor Today:</h4>
+          <div class="picture">
+            <img src="assets/images/profile.jpg">
+          </div>
+          <div class="details">
+            <h3>Jeff Andersen</h3>
+            <ul>
+              <li><span class="label">email</span> <a href="mailto:jeffandersen@gmail.com">jeffandersen@gmail.com</a>
+              <li><span class="label">github</span> <a href="https://github.com/jeffandersen">github.com/jeffandersen</a>
+              <li><span class="label">twitter</span> <a href="https://twitter.com/jeffandersen">@jeffandersen</a>
+            </ul>
+          </div>
+        </div>
       </article>
 
       <article>
-        <h3>These Slides are available at <a href="http://wesbos.com/llc/slides">http://wesbos.com/llc/slides</a></h3>  
+        <h3>These Slides are available at <a href="http://wesbos.com/llc/slides">http://wesbos.com/llc/slides</a></h3>
         <p>They will always be up and always be updated! No real need to save them locally.</p>
       </article>
 
@@ -113,8 +118,8 @@
       <article>
         <h3>Code + Database = <span class="red padbottom">&hearts;</span></h3>
          <div class="build">
-          <img src="http://cl.ly/C1dr/Screen%20Shot%202011-11-21%20at%2010.07.51%20PM.png" alt="">
-          <p>The database holds our data and the code defines how and when the data is printed to the page</p>
+          <img src="http://cl.ly/C1dr/Screen%20Shot%202011-11-21%20at%2010.07.51%20PM.png" alt="" class="scale-image">
+          <p class="no-top-margin">The database holds our data and the code defines how and when the data is printed to the page</p>
           <p>The two work together to <span class="red">output HTML</span></p>
           <p><span class="red">/wp-admin and /wp-includes</span> holds the engine of WordPress - we don't touch it.</p>
           <p><span class="red">/wp-content</span> holds our specific content like themes, plugins and image uploads.</p>
@@ -176,8 +181,8 @@
       </article>
 
 
-      <article class="center" style="background:url(http://www.drodd.com/images10/clapping-gif12.gif); background-size:cover;">
-        <h3 style="color:white;">You're done settings up!</h3>
+      <article class="center" style="background:url(assets/images/high-five.gif); background-size:cover;">
+        <h3 style="color:white;text-shadow:#000 0px 1px 5px;">You're done settings up!</h3>
       </article>
 
       <article>
@@ -255,10 +260,10 @@
           <p>You now have your name at the bottom of your website. Easy, eh?</p>
           <p>Let's step it up a notch!</p>
         </div>
-      </article>  
+      </article>
 
       <!-- <article>
-        <h3 class="">Exercise #2: Task #2</h3>        
+        <h3 class="">Exercise #2: Task #2</h3>
         <div class="build">
           <p>Placing an image in the header.</p>
           <p><strong>Step 1:</strong> Open <code>header.php</code> and find the line that looks like this:</p>
@@ -266,10 +271,10 @@
           <?php bloginfo( 'name' ); ?></a></h1>") ?> </pre>
           <p>Delete it!</p>
           <p>Now we're going to do two things: 1. Create a link, 2. Put an image inside that link.</p>
-          
+
         </div>
 
-      </article> 
+      </article>
 
       <article class="smallcode">
           <strong>Making a dynamic Link to our blog home page</strong>
@@ -279,7 +284,7 @@
           <strong>Add the Image</strong>
           <p>We need the <code>path to the image</code> and <code>the file name</code></p>
           <pre><?php output('<img src="<?php bloginfo("template_directory"); ?>/i/header.png" />')?></pre>
-          outputs:  
+          outputs:
           <pre><?php output('<img src="http://localhost/wordpress/wp-content/themes/ladies-learning-code/i/header.png" alt="">');?></pre>
 
       </article>
@@ -315,10 +320,10 @@
 
       <article>
           <p>To embed the image, we use an <code>img</code> tag. Here we will use a template tag to get the full path to the image in our theme folder. We need the <code>path to the image</code> and <code>the file name</code></p>
-          
+
           <pre><?php output('<img src="<?php bloginfo("template_directory"); ?>/i/portrait.png">')?></pre>
-          
-          outputs:  
+
+          outputs:
 
           <pre><?php output('<img src="http://localhost/wordpress/wp-content/themes/ladies-learning-code/i/portrait.png" alt="">');?></pre>
 
@@ -390,7 +395,7 @@
         <div class="build">
           <p>Before we can start customizing our WordPress theme, it will be helpful to learn the basics of CSS. We won't be diving too deep into CSS as its a huge topic on its own, but lets take a quick look at it.</p>
           <p>CSS stands for Cascading Style Sheets, they allow you easily add style to the elements on your website. Examples of elements are heading tags, images, divs (content and sidebars), links and lists.</p>
-          
+
           <p>For the purposes of this class, it's enough to open the <code>style.css</code> file in your theme and try change colours and fonts from there.</p>
 
           <p>A basic CSS definition has three parts: <strong>selector, property and value.</strong> </p>
@@ -402,20 +407,20 @@
 <p>The <strong>Selector</strong> defines which element the CSS will be applied to.</p>
         <pre>
 
-<?php output('<div class="post"> ... </div>'); ?> 
+<?php output('<div class="post"> ... </div>'); ?>
 div.post { ... }
 
-<?php output('<span class="date"> ... </span>'); ?> 
+<?php output('<span class="date"> ... </span>'); ?>
 span.date { ... }
 
-<?php output('<span class="category"></span> <div class="meta"></div>'); ?>  
-span.category, div.meta { … } 
+<?php output('<span class="category"></span> <div class="meta"></div>'); ?>
+span.category, div.meta { … }
 
-<?php output('<div class="parent"><div class="child"></div></div>'); ?> 
+<?php output('<div class="parent"><div class="child"></div></div>'); ?>
 div.parent div.child { ... }
 
-        </pre>  
-</article>   
+        </pre>
+</article>
 
 
 <article>
@@ -426,8 +431,8 @@ div.parent div.child { ... }
 .wrapper {
   background : black;
   border:2px solid green;
-  font-family:Georgia, sans-serif; 
-} 
+  font-family:Georgia, sans-serif;
+}
 </pre>
 <p>Let's go through a bunch of common CSS...</p>
 </article>
@@ -451,7 +456,7 @@ div.parent div.child { ... }
 
 </article><article>
 <pre>.post h2 a { /* finds .post -> Heading 2 -> links */
-  font-size:40px; 
+  font-size:40px;
   font-family: georgia, sans-serif; /* change the font */
   border-bottom:3px solid goldenRod; /* Changes the bottom border only to goldenRod colour*/
 }</pre>
@@ -476,10 +481,10 @@ div.parent div.child { ... }
   height: 500px;
   overflow: scroll; /* anything over 500px high will have scrollbars */
 }</pre>
-  
+
 </article>
 
-   
+
 
 
 
@@ -510,7 +515,7 @@ div.parent div.child { ... }
           <span class="block" style="background:skyBlue;">skyBlue</span>
           <span class="block" style="background:yellowGreen;">yellowGreen</span>
           </p>
-          
+
           <p>Visit <a href="http://flatuicolors.com/" target=_blank>flatuicolors.com</a> or <a href="http://colours.neilorangepeel.com/" target="_blank">colours.neilorangepeel.com</a> for some inspiration!</p>
 
         </div>
@@ -573,7 +578,7 @@ div.parent div.child { ... }
           <p>Our home page loop shows 5 posts, but a single post page only shows 1.</p>
           <p>Every page has at least a basic loop to output that page's content.</p>
         </div>
-      
+
       </article>
 
       <article>
@@ -586,7 +591,7 @@ div.parent div.child { ... }
 <pre>
   if we have posts
       while we have posts
-         1. The Code in here is run once for every piece of content 
+         1. The Code in here is run once for every piece of content
             retrieved from the database
          2. We might want to output the title, the date and the content
       end while
@@ -626,7 +631,7 @@ div.parent div.child { ... }
 
       <article>
         <h3>Template Tags</h3>
-        
+
         <div class="build">
         <p>Wondering how to actually get your content onto the page while you're inside the loop?</p>
           <p>Template tags are short little PHP functions that will output content from your site.</p>
@@ -678,13 +683,13 @@ div.parent div.child { ... }
 
         <img src="assets/images/post-thumbnail.png" alt="">
 
-        
+
       </article>
 
       <article>
         <p>Go into the WordPress admin an edit one of your posts.</p>
         <p>At the bottom right, click set featured image.<img src="http://wes.io/V8TP/featured"></p>
-        
+
         <p>Select and upload a file. You will need a rather large image for this. If you don't have any available, use the provided images in the learner files folder.</p>
       </article>
 
@@ -738,7 +743,7 @@ div.parent div.child { ... }
         <h3>Step 2: Adding the CSS</h3>
         <p>Open your style.css file and scroll down to the hero section. Our final CSS is on the next slide, but let's step through and code it ourselves!</p>
       </article>
-      
+
       <article>
         <pre>
 .hero {
@@ -762,7 +767,7 @@ div.parent div.child { ... }
         </pre>
       </article>
 
-      <?php /* No more social 
+      <?php /* No more social
       <article>
         <h3>3. Lets get social!</h3>
         <p>We're going to use the Facebook and Twitter API to embed the like/tweet buttons into our page</p>
@@ -797,7 +802,7 @@ div.parent div.child { ... }
  -->      </article>
 
    <article>
-    <p>The last thing we need to do is make these tweet links dynamic. So go ahead and replace FILLMEIN with <br><code><?php output('<?php the_permalink(); ?>'); ?></code></p>   
+    <p>The last thing we need to do is make these tweet links dynamic. So go ahead and replace FILLMEIN with <br><code><?php output('<?php the_permalink(); ?>'); ?></code></p>
 
     <p>This will automatically be filled in with the current blog post URL that you are on. No need to create a new tweet button for each one!</p>
 
@@ -915,7 +920,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
       </article>
 
       <article class="cols">
-        
+
         <p><strong>Step 1:</strong> Dashboard &rarr; Appearance &rarr; Widgets</p>
         <p><strong>Step 2:</strong> From the Available Widgets box, Drag and drop the <code>text</code> widget into your "Primary Widget Area"</p>
         <p><strong>Step 3:</strong> Fill in a Title of your choice.</p>
@@ -924,12 +929,12 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
 
       <article class="center">
         <h3>Like So:</h3>
-        <p><img src="http://wes.io/V7TG/twiter" alt=""></p>
+        <p><img src="http://wes.io/V7TG/twiter" alt="" class="add-margin-top"></p>
       </article>
 
       <article class="center">
         <h3>Save it and you now have your twitter feeding into your sidebar!</h3>
-        <img src="http://wes.io/V7tG/in-the-sidebar" alt="">
+        <img src="http://wes.io/V7tG/in-the-sidebar" alt="" class="add-margin-top">
       </article>
 
       <article>
@@ -962,7 +967,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
           <p>Share This / Addthis</p>
           <p>Subscribe To Comments</p>
           <p>Contact Form 7</p>
-          <p>Quick Cache</p>          
+          <p>Quick Cache</p>
           <p>Advanced custom fields</p>
           <p>Custom Post Type UI</p>
           <p>Anyone have a favourite? </p>
@@ -1004,7 +1009,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
       <article>
         <img src="http://cl.ly/C1x2/Screen%20Shot%202011-11-23%20at%2012.36.55%20AM.png" alt="">
       </article>
-        
+
       <article>
         <img src="http://wes.io/VAnP/final" style="height:100%; display:block; margin:0 auto;">
       </article>
@@ -1016,7 +1021,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
           <pre>
 <?php output('<div class="welcome">
   <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-    
+
   <?php endwhile; ?>
 </div>
 ') ?>
@@ -1036,8 +1041,8 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
   <?php endwhile; ?>
 </div>
 ') ?>
-          </pre>   
-           
+          </pre>
+
                  <img src="http://wes.io/V7x1/wow" alt="">
          </div>
       </article>
@@ -1047,12 +1052,12 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
           <p>Now that we have our Home content pulling in, lets work on our three columns.</p>
           <p><strong>Step 5: </strong>Right underneath <span class="red"><?php output('<?php endwhile; ?> </div>');?></span>, create an empty div with the class of homeColumn.</p>
           <pre>
-<?php output('<div class="homeColumn"></div>'); ?></pre>      
+<?php output('<div class="homeColumn"></div>'); ?></pre>
           <p><strong>Step 6:</strong> Inside that div, insert an <span class="red"><?php output("<h3>Column 1</h3>");?></span>.</span></p>
 <pre><?php output('
 <div class="homeColumn">
   <h3>Column 1</h3>
-  
+
 </div>
 '); ?>
 </pre>
@@ -1112,7 +1117,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
         <li><a href="http://snapwidget.com/" target=_blank>Instagram Widget</a></li>
       </article>
       <article>
-      
+
       <p><strong>Step 9:</strong> You're done! I've provided you with some minimal style in your <span class="red">style.css</span> file in the section marked "CUSTOM HOME PAGE STYLE".</p>
 
       <p>Spend some time working on your site to make it your own. Chat with your tables and mentors to see how you can customize your theme to be totally yours!</p>
@@ -1147,7 +1152,7 @@ view. <img src="http://cl.ly/C2Lt/Screen%20Shot%202011-11-22%20at%2010
       <article class="center">
         <span style="font-size: 80px; color:#000; padding-top: 250px; display:block;">Questions? Thanks!</span>
       </article>
-      
+
     </section>
 
   </body>
