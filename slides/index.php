@@ -36,8 +36,10 @@
       </article>
 
       <article>
-        <h3>These Slides are available at <a href="http://wesbos.com/llc/slides">http://wesbos.com/llc/slides</a></h3>
-        <p>They will always be up and always be updated! No real need to save them locally.</p>
+        <div class="single-title">
+          <h3>These Slides are available at</h3>
+          <p><a href="http://bit.ly/llc-wordpress">bit.ly/llc-wordpress</a></p>
+        </div>
       </article>
 
       <article>

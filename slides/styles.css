@@ -71,6 +71,15 @@ h1 {
   margin-top: 20px;
 }
 
+.single-title {
+  padding-top: 180px;
+  text-align: center;
+}
+
+.single-title p {
+  font-size: 1.6em;
+}
+
 p.no-top-margin {
   margin-top: 0;
 }
