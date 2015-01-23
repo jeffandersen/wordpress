@@ -214,7 +214,7 @@
         <h3>The Ladies Learning Code theme</h3>
         <p>The default theme is a little confusing, lets install a simpler one we can build upon!</p>
         <p>All themes live in <code>/wp-content/themes</code></p>
-        <p>Unzip <code>llctheme.zip</code> and drag+drop into your <code>/wp-content/themes</code> folder</p>
+        <p>Drag+drop the <code>ladies-learning-code</code> folder into your <code>/wp-content/themes</code> folder</p>
         <p><img src="http://cl.ly/C0CJ/Screen%20Shot%202011-11-21%20at%2011.02.09%20PM.png" alt=""></p>
         <p>Dashboard &rarr; Appearance &rarr; Themes</p>
         <p>We Now see our Ladies Learning Code Theme, go ahead and activate it.</p>
